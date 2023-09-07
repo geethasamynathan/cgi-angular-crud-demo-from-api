@@ -1,0 +1,17 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <h3>Update Brand</h3>
+        <form [formGroup]="updateBrandForm" (ngSubmit)="submitForm()" novalidate>
+            <div class="form-group">
+                <label>Brand ID</label>  
+                <input type="text" formControlName="brandId" class="form-control" readonly>
+              </div>
+            <div class="form-group">
+              <label>Brand Name</label>  
+              <input type="text" formControlName="brandName" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+    </div>

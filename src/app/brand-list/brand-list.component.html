@@ -1,0 +1,30 @@
+
+<div class="container container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inner">
+                <h2> Brands</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Brand Id</th>
+                            <th>BrandName</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let brand of brandList">
+                            <td>{{brand.brandId}}</td>
+                            <td>{{brand.brandName}}</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm move-right" 
+                                [routerLink]="['/edit-brand/',brand.brandId]">Edit</button>
+                                <button class="btn btn-danger btn-sm move-right" (click)="deleteBrand(brand)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
